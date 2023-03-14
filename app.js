@@ -107,14 +107,12 @@ function checkCollision(){
     }
     if(ballX <= 0){
         player2Score += 1;
-        scoreText.classList.toggle('.enemyplus');
         updateScore();
         createBall();
         return;
     }
     if(ballX >= gameWidth){
         player1Score += 1;
-        scoreText.classList.toggle('.plus');
         updateScore();
         createBall();
         return;
