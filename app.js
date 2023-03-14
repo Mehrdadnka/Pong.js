@@ -168,7 +168,6 @@ function updateScore(){
     scoreText.textContent = `${player1Score} : ${player2Score}`
 };
 function resetGame(){
-    resetButton.addEventListener('click', () => {
         player1Score = 0;
         player2Score = 0;
         paddle1 = {
@@ -186,5 +185,4 @@ function resetGame(){
         updateScore();
         clearInterval(intervalID);
         gameStart();
-    })
 };
