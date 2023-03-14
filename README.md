@@ -1,7 +1,7 @@
 # Pong.js
 Player 1 keys:
-  Up: w ************
-  Down: s ************
+  Up: W ************
+  Down: S ************
   
 Player 2 keys:
   up: Arrow Up  ************
