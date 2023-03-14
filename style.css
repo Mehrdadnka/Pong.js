@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'abel';
+    src: url(fonts/Abel-Regular.ttf);
+}
+*, *::before, *::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'abel', sans-serif;
+}
+body
+{
+    background-color: rgb(18, 9, 51);
+}
+#gamecontainer
+{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-shadow:  0 0 10px black;
+    padding: 1rem;
+    background: linear-gradient(45deg, rgba(255,255,255,0.2),rgba(255,255,255,0.8));
+    backdrop-filter: blur;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+}
+#gameBoard
+{
+    box-shadow:  0 0 10px black;
+    border-radius: 1rem;
+}
+#resetButton
+{
+    font-size: 42px;
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem 4rem;
+    font-weight: 600;
+    border: none;
+    background-color: aqua;
+    cursor: pointer;
+    color: black;
+    border-radius: 0.4rem;
+    transition: all 500ms ease;
+    box-shadow: 0 0 4px 1px black;
+}
+#resetButton:hover
+{
+    box-shadow: 0 0 8px 2px black;
+}
+#resetButton:active
+{
+    opacity: 0.8;
+    color: rgba(0, 0, 0, 0.6);
+    box-shadow: none;
+}
+#resetButton:focus
+{
+    outline: none;
+}
+.scoreText
+{
+    font-size: 72px;
+    background-color: none;
+    margin: 1rem auto;
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+    transition: all 600ms ease;
+
+}
+.scoreText.plus
+{
+    animation: bgColorPlayer1 1.4s;
+}
+.scoreText.enemyplus
+{
+    animation: bgColorPlayer2 1.4s;
+
+}
+
+@keyframes bgColorPlayer1 {
+    0%
+    {
+        background-color: rgb(238, 44, 63);
+        box-shadow: 0 0 14px rgb(230, 230, 29);
+    }
+    100%
+    {
+        background-color: none;
+        box-shadow: none;
+    }
+    
+}
+@keyframes bgColorPlayer2 {
+    0%
+    {
+        background-color: rgb(63, 190, 246);
+        box-shadow: 0 0 14px rgb(32, 32, 2);
+    }
+    100%
+    {
+        background-color: none;
+        box-shadow: none;
+    }
+}
