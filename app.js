@@ -1,7 +1,7 @@
 const gameBoard = document.getElementById('gameBoard');
 const ctx = gameBoard.getContext('2d');
 const scoreText = document.querySelector('.scoreText');
-const reserButton = document.getElementById('resetButton');
+const resetButton = document.getElementById('resetButton');
 const gameWidth = gameBoard.width;
 const gameHeight = gameBoard.height;
 const boardBackground = 'rgba(0, 5, 2, 0.8)';
@@ -33,7 +33,7 @@ let paddle2 = {
     y: gameHeight - 150
 };
 window.addEventListener("keydown", changeDirection);
-reserButton.addEventListener("click", resetGame);
+resetButton.addEventListener("click", resetGame);
 
 gameStart();
 drawPaddles();
@@ -168,7 +168,7 @@ function updateScore(){
     scoreText.textContent = `${player1Score} : ${player2Score}`
 };
 function resetGame(){
-    reserButton.addEventListener('click', () => {
+    resetButton.addEventListener('click', () => {
         player1Score = 0;
         player2Score = 0;
         paddle1 = {
